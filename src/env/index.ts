@@ -1,5 +1,5 @@
 import { config } from 'dotenv'
-import { envSchema } from '../schemas/env.schema'
+import { envSchema } from '../validation/env.schema'
 
 if (process.env.NODE_ENV === 'test') {
   config({ path: '.env.test' })

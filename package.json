@@ -4,14 +4,18 @@
   "main": "index.js",
   "scripts": {
     "dev": "tsx watch src/server.ts",
+    "lint": "npx eslint",
+    "test": "vitest",
     "migrate:create": "npx knex migrate:make",
-    "migrate:latest": "npx knex migrate:latest"
+    "migrate:latest": "npx knex migrate:latest",
+    "migrate:rollback": "npx knex migrate:rollback --all"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@fastify/cookie": "^11.0.2",
     "dotenv": "^16.4.7",
     "fastify": "^5.2.1",
     "knex": "^3.1.0",
@@ -20,11 +24,14 @@
   },
   "devDependencies": {
     "@types/node": "^22.13.1",
+    "@types/supertest": "^6.0.2",
     "eslint": "^9.19.0",
     "globals": "^15.14.0",
     "sqlite3": "^5.1.7",
+    "supertest": "^7.0.0",
     "ts-node": "^10.9.2",
     "tsx": "^4.19.2",
-    "typescript-eslint": "^8.23.0"
+    "typescript-eslint": "^8.23.0",
+    "vitest": "^3.0.5"
   }
 }
