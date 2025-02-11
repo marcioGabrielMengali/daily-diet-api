@@ -23,8 +23,10 @@ curl --request POST \
   --url http://localhost:3333/users \
   --header 'Content-Type: application/json' \
   --header 'User-Agent: insomnia/10.3.0' \
+  --cookie sessionId=d847476d-857b-4642-84dc-1208dc3ee795 \
   --data '{
-	"name": "marcio"
+	"name": "marcio",
+	"email": "marcio@gmail.com"
 }'
 ```
 ### List Users
