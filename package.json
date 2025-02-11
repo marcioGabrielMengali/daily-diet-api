@@ -4,7 +4,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "tsx watch src/server.ts",
-    "migrate:create": "npx knex migrate:make"
+    "migrate:create": "npx knex migrate:make",
+    "migrate:latest": "npx knex migrate:latest"
   },
   "keywords": [],
   "author": "",
