@@ -1,2 +1,10 @@
 # Modules
 node_modules/
+
+# Env
+.env
+.env.test
+
+# Db
+db/app.db
+db/test.db
