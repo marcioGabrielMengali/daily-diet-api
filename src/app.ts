@@ -1,6 +1,6 @@
 import fastify from 'fastify'
 import cookie from '@fastify/cookie'
-import { usersRoutes } from './routes/routes'
+import { mealsRoutes, usersRoutes } from './routes/routes'
 
 const app = fastify()
 
@@ -10,4 +10,5 @@ app.addHook('preHandler', async (request) => {
 
 app.register(cookie)
 app.register(usersRoutes, { prefix: '/users' })
+app.register(mealsRoutes, { prefix: '/meals' })
 export default app
