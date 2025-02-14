@@ -6,9 +6,9 @@
     "dev": "tsx watch src/server.ts",
     "lint": "npx eslint",
     "test": "vitest",
-    "migrate:create": "npx knex migrate:make",
-    "migrate:latest": "npx knex migrate:latest",
-    "migrate:rollback": "npx knex migrate:rollback --all",
+    "migrate:create": "knex migrate:make",
+    "migrate:latest": "knex migrate:latest",
+    "migrate:rollback": "knex migrate:rollback --all",
     "build": "tsup src --out-dir buid"
   },
   "keywords": [],
