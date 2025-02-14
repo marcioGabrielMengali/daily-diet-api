@@ -61,13 +61,12 @@ describe('User Routes', () => {
   })
   describe('listUsers', () => {
     it('Should list users', async () => {
-      const createUserResponse = await supertest(app.server)
+     await supertest(app.server)
         .post('/users')
         .send({
           name: 'marcio',
           email: 'marcio@gmail.com',
         })
-      const cookie = createUserResponse.get('Set-Cookie')
       const listUsersResponse = await supertest(app.server).get('/users')
       expect(listUsersResponse.statusCode).toBe(200)
       expect(listUsersResponse.body.users).toEqual([
